@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CriticografoPMRI.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="White" Padding="24" CornerRadius="0">
+            <Label Text="ACTIVIDAD:CRITICOGRAFO" HorizontalTextAlignment="Center" TextColor="Black" FontSize="24"/>
+        </Frame>
+        
+        <Label Text="Nombre:" FontSize="20" Padding="30,10,30,10" TextColor="Black"/>
+        <Entry HorizontalOptions="Center" TextColor="HotPink" x:Name="Nombre" WidthRequest="425"/>
+        
+        <Label Text="GENERO:" FontSize="19" Padding="10,10,20,0" TextColor="Black" Margin="5"/>
+
+
+        <StackLayout Orientation="Horizontal" Margin="4">
+            <RadioButton Content="Hombre" GroupName="Genero" x:Name="Hombre"/>
+            <RadioButton Content="Mujer" GroupName="Genero" x:Name="Mujer"/>
+        </StackLayout>
+
+        <Grid Margin="20">
+            
+
+            <StackLayout Grid.Column="0" Orientation="Horizontal" VerticalOptions="Center" Grid.Row="0">
+                <CheckBox  x:Name="ALTO"/>
+                <Label Text="ALTO"/>
+            </StackLayout>
+
+
+            <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal" VerticalOptions="Center">
+                <CheckBox x:Name="FEO"/>
+                <Label Text="FEO"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" VerticalOptions="Center">
+                <CheckBox x:Name="LISTO"/>
+                <Label Text="LISTO"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal" VerticalOptions="Center">
+                <CheckBox x:Name="EXTRAVAGANTE"/>
+                <Label Text="EXTRAVAGANTE"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal" VerticalOptions="Center">
+                <CheckBox x:Name="RARO"/>
+                <Label Text="RARO"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalOptions="Center">
+                <CheckBox x:Name="GRANDE"/>
+                <Label Text="GRANDE"/>
+            </StackLayout>
+
+        </Grid>
+        <Button Text="CRITICAR" CornerRadius="10" Margin="20" WidthRequest="250" HorizontalOptions="Center" Clicked="Button_Clicked" TextColor="HotPink" BackgroundColor="LightPink"/>
+        <Entry x:Name="Resultado" TextColor="HotPink" WidthRequest="425" HorizontalOptions="Center"/>
+
+    </StackLayout>
+</ContentPage>
